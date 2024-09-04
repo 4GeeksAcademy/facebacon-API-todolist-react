@@ -1,12 +1,81 @@
+.todo-container {
+    max-width: 400px;
+    margin: 100px auto; 
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica;
+    color: #767676;
+  }
+  
+  h1 {
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+    margin-bottom: 30px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 15px;
+    width: 100%;
+    border: .1px solid rgb(209, 209, 209);
+    border-radius: 8px ;
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.03);
+    font-size: 20px;
+    outline: none;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 24px;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    background-color: white;
+    margin: 10px 0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s; 
+    cursor: pointer;
+    transform: translateY(0); 
+  }
+  
+  .task-item:nth-child(even) {
+    transform: translateY(-3px); 
+  }
+  
+  .task-item:hover .delete-button {
+    display: block;
+  }
+  
+  .delete-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #cc9a9a;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: auto;
+  }
+  
 
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+  .task-count {
+    font-size: 14px;
+    color: #777;
+    text-align: left;
+    padding: 10px 10px;
+  }
